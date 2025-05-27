@@ -1,0 +1,55 @@
+.element-picker-overlay {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: white;
+  border: 2px solid #333;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  z-index: 10000;
+  font-family: Arial, sans-serif;
+  cursor: move;
+  user-select: none;
+}
+
+.element-picker-overlay button {
+  display: block;
+  width: 120px;
+  padding: 10px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.element-picker-overlay button:hover {
+  background-color: #45a049;
+}
+
+.element-picker-overlay button.active {
+  background-color: #ff6b6b;
+}
+
+.element-picker-highlight {
+  outline: 3px solid red !important;
+  outline-offset: 2px !important;
+}
+
+.element-picker-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #4CAF50;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  z-index: 10001;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
