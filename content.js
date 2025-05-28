@@ -172,12 +172,6 @@ class ElementPicker {
     while (current && current.nodeType === Node.ELEMENT_NODE && current !== document.body) {
       let selector = current.tagName.toLowerCase();
       
-      if (current.id) {
-        selector += `#${current.id}`;
-        path.unshift(selector);
-        break;
-      }
-      
       if (current.className) {
         const classes = current.className.split(' ')
           .filter(c => c && !c.startsWith('element-picker'))
