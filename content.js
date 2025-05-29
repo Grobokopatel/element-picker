@@ -172,16 +172,6 @@ class ElementPicker {
     while (current && current.nodeType === Node.ELEMENT_NODE && current !== document.body) {
       let selector = current.tagName.toLowerCase();
       
-      if (current.className) {
-        const classes = current.className.split(' ')
-          .filter(c => c && !c.startsWith('element-picker'))
-          .map(c => c.trim())
-          .filter(c => c);
-        if (classes.length > 0) {
-          selector += '.' + classes.join('.');
-        }
-      }
-      
       const siblings = Array.from(current.parentNode?.children || []);
       const sameTagSiblings = siblings.filter(sibling => 
         sibling.tagName === current.tagName
